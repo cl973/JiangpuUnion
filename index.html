@@ -5,10 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>江浦工会</title>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        @font-face {
+            font-family: 'YuWei';  /* 定义字体名称 */
+            src: url('fonts/YuWeiShuFaXingShuJianTi-1.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Mao';
+            src: url('fonts/maozedong-1.ttf') format('truetype');
+        }
+
+        .header{
+            background-image: url(image/bg.jpg);
+            background-size: cover;
+            background-position: top;
+            background-repeat: no-repeat;
+        }
+    </style>
 </head>
 
 <body>
-    
+    <div class="header">
+        <span id="jpgh">江浦工会</span>
+    </div>
+    <ul id="nav">
+        <li class="slide1"></li>
+        <li class="slide2"></li>
+        <li><a href="index.html"><b>首页</b></a></li>
+        <li><a href="article.html"><b>文章</b></a></li>
+        <li><a href="images.html"><b>图集</b></a></li>
+        <li><a href="videos.html"><b>视频</b></a></li>
+   </ul>
+   
 </body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="scripts/nav.js"></script>
 
 </html>
