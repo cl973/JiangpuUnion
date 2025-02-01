@@ -23,6 +23,155 @@
             background-position: top;
             background-repeat: no-repeat;
         }
+
+        #main{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #click-section{
+            width: 35%;
+            height: 100%;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        #drawerboxes{
+            margin-left: 10%;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        #drawerboxes::before{
+            content: "";
+            width: 8px;
+            height: 94%;
+            position: absolute;
+            left: -10px;
+            top: 3%;
+            z-index: 120;
+        }
+
+        .drawerbox{
+            width: 70%;
+            height: calc(100% / 5.5);
+            position: relative;
+            z-index: 100;
+            transform: translateX(-70%);
+            transition: transform .5s ease-in-out;
+        }
+
+        .drawerbox.active{
+            transform: translateX(0);
+        }
+
+        .drawer-btn{
+            width: 100%;
+            height: 100%;
+            font: 800 30px 'Mao';
+            background-color: rgb(146, 149, 158);
+            border: none;
+            transition: background-color .5s ease-in-out;
+            color:#ffffff00;
+        }
+
+        .drawer-btn.active{
+            background-image: url(image/drawer-btn-bg.jpg);
+            background-size: cover;
+            color: rgb(161, 13, 13);
+        }
+
+        .drawer-btn:hover{
+            cursor: pointer;
+        }
+
+        .drawer-head{
+            position: absolute;
+            color: white;
+            font-size: 200px;
+            font-weight: 700;
+            right: -38px;
+            top: calc(50% - 135px);
+            text-shadow: 2px -1px 8px rgb(95, 63, 63);
+        }
+
+        #slide-section{
+            position: relative;
+            height: 100%;
+            width: 65%;
+            display: flex;
+            justify-content: center;
+            padding: 0 40px;
+            background: linear-gradient(to right bottom, #adabab, #d7d6d4, #b7b7b7);
+            backdrop-filter: blur(11px);
+        }
+
+        #slide-bar{
+            position: absolute;
+            top: 10%;
+            left: 40px;
+            height: 80%;
+            width: 1px;
+            background-color: #794545;
+        }
+
+        #bar{
+            position: absolute;
+            height:calc(100% / 3);
+            width: 5px;
+            top: 0;
+            left: -1.2px;
+            background-color: #8e2d2d;
+            transition: transform .5s ease-in-out;
+        }
+
+        #card-section{
+            width: 80%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .card{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 10% 0;
+            color: white;
+            font-size: 30px;
+            transition: transform .5s ease-in-out;
+        }
+
+        .card-title{
+            font: 700 80px 'YuWei';
+            padding-bottom: min(20%, 40px);
+            color: rgb(161, 13, 13);
+        }
+
+        .card-content{
+            font-size: 19px;
+            font-weight: 400;
+            color: rgb(80, 7, 7);
+            margin-bottom: 60px;
+        }
+
+        .card-img{
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .card-img img{
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -30,18 +179,171 @@
     <div class="header">
         <span id="jpgh">江浦工会</span>
     </div>
-    <ul id="nav">
-        <li class="slide1"></li>
-        <li class="slide2"></li>
-        <li><a href="index.html"><b>首页</b></a></li>
-        <li><a href="article.html"><b>文章</b></a></li>
-        <li><a href="images.html"><b>图集</b></a></li>
-        <li><a href="videos.html"><b>视频</b></a></li>
-   </ul>
+    <div class="navi">
+        <ul id="nav">
+            <li class="slide1"></li>
+            <li class="slide2"></li>
+            <li><a href="index.html"><b>首页</b></a></li>
+            <li><a href="article.html"><b>文章</b></a></li>
+            <li><a href="images.html"><b>图集</b></a></li>
+            <li><a href="videos.html"><b>视频</b></a></li>
+       </ul>
+       <div class="square" style="left: 800px; top: 130px"></div>
+       <div class="square" style="left: 790px; top: 117px"></div>
+       <div class="square" style="left: 830px; top: 123px"></div>
+       <div class="square" style="left: 800px; top: 130px"></div>
+       <div class="square" style="left: 750px; top: 110px"></div>
+       <div class="square" style="left: 900px; top: 108px"></div>
+       <div class="square" style="left: 920px; top: 120px"></div>
+       <div class="square" style="left: 1002px; top: 122px"></div>
+       <div class="square" style="left: 1100px; top: 125px"></div>
+       <div class="square" style="left: 980px; top: 130px"></div>
+       <div class="square" style="left: 890px; top: 139px"></div>
+       <div class="square" style="left: 1280px; top: 126px"></div>
+       <div class="square" style="left: 1340px; top: 133px"></div>
+       <div class="square" style="left: 1400px; top: 110px"></div>
+       <div class="square" style="left: 1200px; top: 126px"></div>
+       <div class="square" style="left: 1180px; top: 109px"></div>
+       <div class="square" style="left: 1050px; top: 116px"></div>
+       <div class="square" style="left: 1130px; top: 127px"></div>
+       <div class="square" style="left: 1300px; top: 131px"></div>
+       <div class="square" style="left: 1300px; top: 131px"></div>
+    </div>
    
+    <div id="main">
+        <div id="click-section">
+            <div id="drawerboxes">
+                <div class="drawerbox active">
+                    <button class="drawer-btn active" onclick="slideTo(1)">
+                        星火金陵
+                        <span class="drawer-head">1</span>
+                    </button>
+                </div>
+                <div class="drawerbox">
+                    <button class="drawer-btn" onclick="slideTo(2)">
+                        品重柱石
+                        <span class="drawer-head">2</span>
+                    </button>
+                </div>
+                <div class="drawerbox">
+                    <button class="drawer-btn" onclick="slideTo(3)">
+                        滚滚江潮
+                        <span class="drawer-head">3</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="slide-section">
+            <div id="slide-bar">
+                <div id="bar"></div>
+            </div>
+            <div id="card-section">
+                <div id="card1" class="card">
+                    <div class="card-title">星火金陵</div>
+                    <div class="card-content">
+                        &emsp;&emsp;1925年5月31日，“五卅”惨案的消息传到南京，一时间群情激奋，人们因帝国主义侵略郁积已久的怒火再也抑制不住了。全城各大、中学校都迅速建立起后援会，一场全市性的学生罢课展开。人们在城南的主要街道游行示威，要求政府对外严正交涉，“以保主权，而平民愤”。当学生运动开展得如火如荼的同时，共青团南京地委接到团中央发来的快函，南京党、团组织领导成员连夜开会研究，根据快函精神决定重点发动英商和记洋行工人罢工，以抗议英帝国主义暴行。随后5000余名工人开始了为期长达42天的罢工斗争。
+                    </div>
+                    <div class="card-img">
+                        <img src="image/Students.jpg" alt="星火金陵">
+                    </div>
+                </div>
+
+                <div id="card2" class="card">
+                    <div class="card-title">品重柱石</div>
+                    <div class="card-content">
+                        &emsp;&emsp;王荷波是中国工人运动的杰出领袖，中国共产党早期的重要成员。他是中国工人运动的杰出先驱，是中共第一位工人出身的中央执行委员，也是中共第一个纪律检查机构——中央监察委员会的首任主席。1919年五四运动爆发时，他发动浦镇工人游行，积极领导工人罢工，并在后来创办了南京地区最早的工会——浦镇机厂中华工会。1922年6月，王荷波在罗章龙的介绍下加入中国共产党，成为津浦铁路的第一个工人党员。1923年，王荷波所领导的“二·九”卧轨斗 争，成功地阻止了津浦铁路南段列车的运行，使得该段交通全部瘫痪，有力地支援了京汉铁路大罢工。                     
+                    </div>
+                    <div class="card-img">
+                        <img src="image/Wang.jpg" alt="品重柱石">
+                    </div>
+                </div>
+                
+                <div id="card3" class="card">
+                    <div class="card-title">滚滚江潮</div>
+                    <div class="card-content">
+                        &emsp;&emsp;1948年，为配合人民解放军正面战场的斗争，在中共南京地下市委的领导下，两浦工人又掀起了工人运动的高潮。在与国民党当局交涉要求补发米贴和欠薪无果后，7月2日，中共两浦区委组织发动了浦镇机厂、铁路、港务等十多个机构5000多人参加的大罢工，罢工浪潮席卷了整个两浦地区。罢工斗争使两浦地区机器停转、水电停供、火车停开、轮船停航，整个浦口铁路陷于瘫痪。下午6时整，路局全部同意工人提出的条件，罢工宣告结束。这次罢工虽然时间不太长，但造成火车、轮渡中断十多个小时，影响极大，使一江之隔的国民党南京政府极为震惊，并在一定程度上打乱了国民党的军运部署，直接支援了解放军豫东战场和淮海战役。 
+                    </div>
+                    <div class="card-img">
+                        <img src="image/1948.jpg" alt="滚滚江潮">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="scripts/nav.js"></script>
+<script>
+    let chosenSlideNumber = 1;//当前幻灯片编号
+    let offset = 0;//幻灯片偏移量
+    let barOffset = 0;//导航条偏移量
+    let intervalID;//定时器ID
+
+    //启动轮播
+    startSlide();
+
+    const drawerBtns = Array.from(document.querySelectorAll('.drawer-btn'));
+    drawerBtns.forEach(btn => {
+        btn.addEventListener("click",() => {
+            clearInterval(intervalID);
+            startSlide();
+        })
+    })
+
+    const slideSection = document.querySelector("#slide-section");
+
+    slideSection.addEventListener("mouseenter",() => {
+        clearInterval(intervalID);
+    })
+
+    slideSection.addEventListener("mouseleave",() => {
+        startSlide();
+    })
+
+    function slideTo(slideNumber){
+        drawerboxToggle(slideNumber);
+        drawerbtnToggle(slideNumber);
+
+        let previousSlideNumber = chosenSlideNumber;
+        chosenSlideNumber = slideNumber;
+        offset += (chosenSlideNumber - previousSlideNumber) * (-100);
+        barOffset += (chosenSlideNumber - previousSlideNumber) * (100);
+        barSlide(barOffset);
+
+        const slides = document.querySelectorAll('.card');
+        Array.from(slides).forEach(slide => {
+            slide.style.transform = `translateY(${offset}%)`;
+        })
+    }
+
+    function drawerboxToggle(drawerboxNumber){
+        let preDrawerboxNumber = chosenSlideNumber;
+        const drawerboxes = document.querySelectorAll('.drawerbox');
+        drawerboxes[preDrawerboxNumber - 1].classList.toggle('active');
+        drawerboxes[drawerboxNumber - 1].classList.toggle('active');
+    }
+
+    function drawerbtnToggle(drawerBtnNumber){
+        let preDrawerBtnNumber = chosenSlideNumber;
+        const drawerBtns = document.querySelectorAll('.drawer-btn');
+        drawerBtns[preDrawerBtnNumber - 1].classList.toggle('active');
+        drawerBtns[drawerBtnNumber - 1].classList.toggle('active');
+    }
+
+    function barSlide(barOffset){
+        const bar = document.querySelector('#bar');
+        bar.style.transform = `translateY(${barOffset}%)`;
+    }
+
+    function startSlide(){
+        intervalID = setInterval(() => {
+            slideTo(chosenSlideNumber % 3 + 1);
+        }, 3000);
+    }
+
+</script>
 
 </html>
