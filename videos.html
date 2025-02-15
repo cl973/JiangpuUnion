@@ -26,13 +26,15 @@
 
         .content{
             position: relative;
-            height: 700px;
+            height: 1000px;
             width: 85%;
             display: flex;
+            flex-direction: column;
             margin: 0 auto;
             padding: 0 40px;
             background: linear-gradient(to right bottom, #a5a3a3, #cac9c8, #a9a8a8);
             backdrop-filter: blur(11px);
+
         }
 
         .head{
@@ -44,6 +46,43 @@
             color: #4c0707;
             margin-top: 50px;
             letter-spacing: 7px;
+        }
+
+        .source{
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            width: 45%;
+            height: auto;
+
+        }
+
+        .btn{
+            left: 20px;
+            top: 20px;
+            position: relative;
+            float: left;
+            border: none;
+            list-style: none;
+            width: 150px;
+            height: 40px;
+            text-align: center;
+            border-radius: 10em;
+            background:#ffffff;
+            margin-right: 50px;
+        }
+
+        .btn a{
+            font: 500 24px "优设标题黑";
+            color:#610707;
+            border: none;
+            text-decoration: none;
+            word-wrap: break-word;
+            margin-top: 5px;
+        }
+
+        .btn:hover{
+            background-color: rgb(218, 117, 117);
         }
     </style>
 </head>
@@ -81,7 +120,15 @@
 
     <div class="head">精选视频</div>
     <div class="content">
-        
+        <img src="image/video_cover.png" alt="cover" style="height: 740px; margin: 20px; border: 4px #84342f solid;">
+        <div class="source">
+            <div class="btn">
+                <a href="https://www.bilibili.com/video/BV1nNKKexE8C/?spm_id_from=333.1387.homepage.video_card.click&vd_source=876de7ed102cb299a655631b120bfa66"><b>bilibili</b></a>
+            </div>
+            <div class="btn">
+                <a href="https://www.xiaohongshu.com/explore/67af1b550000000029035f1d?app_platform=android&ignoreEngage=true&app_version=8.70.0&share_from_user_hidden=true&xsec_source=app_share&type=video&xsec_token=CBc6T0M0v4ucHnSu9uCNubJ1UCK1oriAbJC1NuMEmU6fM=&author_share=1&xhsshare=QQ&shareRedId=ODw3NkU5SEo2NzUyOTgwNjY2OTo1O0s8&apptime=1739529118&share_id=142c3325a07940ac9af5318159874f71&share_channel=qq"><b>小红书</b></a>
+            </div>
+        </div>
     </div>
    
 </body>
